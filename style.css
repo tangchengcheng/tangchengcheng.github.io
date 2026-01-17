@@ -1,0 +1,200 @@
+/* ===================================== */
+/* CLEAN ACADEMIC HOMEPAGE STYLES       */
+/* ===================================== */
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* HEADER */
+header {
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+header .subtitle {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+/* ABOUT SECTION */
+#about p {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    color: #444;
+}
+
+#about p:last-of-type {
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+/* ===================================== */
+/* PUBLICATIONS                          */
+/* ===================================== */
+
+.publication {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+/* Teaser Image */
+.pub-image {
+    flex-shrink: 0;
+    width: 200px;
+    background-color: #e8e8e8;
+    border-radius: 4px;
+    min-height: 150px;
+}
+
+.pub-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    min-height: 150px;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Publication Text Content */
+.pub-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pub-text .title {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.pub-text .authors {
+    font-size: 0.95em;
+    color: #555;
+}
+
+.pub-text .venue {
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+}
+
+.pub-text .links {
+    margin-top: 8px;
+    font-size: 0.9em;
+}
+
+.pub-text .links a {
+    color: #2563eb;
+    margin-right: 4px;
+}
+
+/* ===================================== */
+/* RESPONSIVE DESIGN                     */
+/* ===================================== */
+
+/* Tablet and below: Stack publication layout */
+@media (max-width: 768px) {
+    .publication {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .pub-image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile: Further adjustments */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .pub-text .title {
+        font-size: 1.05em;
+    }
+}
+
+/* ===================================== */
+/* FOOTER                                */
+/* ===================================== */
+
+footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+}
